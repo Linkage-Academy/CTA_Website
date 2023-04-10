@@ -1,6 +1,7 @@
 import { Button, Modal, Select, Stack, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import useSendEmailModalStyles from "./SendEmailModal.styles";
+import LogoLightGray from "./assets/LogoLightGray.png";
 
 export interface ISendEmailModalProps {
   opened: boolean;
@@ -37,6 +38,11 @@ function SendEmailModal({ opened, close }: ISendEmailModalProps) {
         close();
       }}
       title="Inscripción"
+      styles={{
+        content: {
+          backgroundImage: `url(${LogoLightGray})`,
+        },
+      }}
     >
       <form method="POST" onSubmit={onSubmit}>
         <Stack>
