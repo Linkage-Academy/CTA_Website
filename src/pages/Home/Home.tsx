@@ -9,6 +9,7 @@ import TechCenterV2Img from "./assets/ProgrammerSet.webp";
 import VRImg from "./assets/VrImg.webp";
 import VR from "./assets/Vr.webp";
 import MissionImg from "./assets/MissionImg.webp";
+import AbUsImg from "./assets/AboutUsSectionImg.svg"
 
 import HomePageTemplate, {
   IHomePageTemplateProps,
@@ -61,14 +62,13 @@ function Home() {
         title: "Visión",
         description:
           "Aplicar nuevos sistemas pedagógicos que maximicen las competencias tecnológicas de los estudiantes en cada etapa de su desarrollo cognitivo.",
-        bottomSection: <Image src={VR} maw={350} />,
       },
       mission: {
         title: "Misión",
         description:
           "Implementar proyectos tecnológicos mediante la incidencia en la reestructuración del sistema educativo regional.",
-        bottomSection: <Image src={MissionImg} maw={350} />,
       },
+      abUsImg:AbUsImg
     },
   };
 

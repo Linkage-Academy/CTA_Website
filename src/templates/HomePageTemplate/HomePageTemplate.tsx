@@ -3,9 +3,7 @@ import {
   ActionIcon,
   Box,
   Card,
-  Center,
   DefaultMantineColor,
-  Group,
   SimpleGrid,
   Stack,
   Text,
@@ -23,6 +21,7 @@ import ValuesSection, {
   IValuesSectionprops,
 } from "../../components/ValuesSection/ValuesSection";
 import AboutUs, { IAboutUsprops } from "../../components/AboutUs/AboutUs";
+import AboutUsSection, {IAboutUsSectionprops} from "../../components/AboutUsSection/AboutUsSection";
 
 // Interfaces
 import { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
@@ -40,7 +39,7 @@ export interface IHomePageTemplateProps {
   };
   infoFirst: IStackInfoboxProps;
   valuesInfo: IValuesSectionprops;
-  aboutUsInfo: IAboutUsprops;
+  aboutUsInfo: IAboutUsSectionprops;
 }
 
 function HomePageTemplate({
@@ -126,7 +125,7 @@ function HomePageTemplate({
             </Card>
           </SimpleGrid>
         </Stack>
-        <AboutUs {...aboutUsInfo} />
+        <AboutUsSection {...aboutUsInfo} />
         <StackInfobox {...infoFirst} />
       </Stack>
     </Stack>
