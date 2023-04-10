@@ -4,31 +4,30 @@ import {
   Box,
   Card,
   DefaultMantineColor,
+  Group,
+  Image,
   SimpleGrid,
   Stack,
   Text,
   Title,
-  Group,
-  Image,
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconAbc } from "@tabler/icons-react";
+import {
+  IconAward,
+  IconClipboardCheck,
+  IconFriends,
+  IconSchool,
+} from "@tabler/icons-react";
 import HeroHeader from "../../components/HeroHeader";
-import StackInfobox, {
-  IStackInfoboxProps,
-} from "../../components/StackInfobox/StackInfobox";
-import GroupInfobox, { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
-import ValuesSection, {
-  IValuesSectionprops,
-} from "../../components/ValuesSection/ValuesSection";
-import AboutUs, { IAboutUsprops } from "../../components/AboutUs/AboutUs";
-import AboutUsSection, {IAboutUsSectionprops} from "../../components/AboutUsSection/AboutUsSection";
+import { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
+import { IValuesSectionprops } from "../../components/ValuesSection/ValuesSection";
+import AboutUsSection, {
+  IAboutUsSectionprops,
+} from "../../components/AboutUsSection/AboutUsSection";
 
 // Interfaces
-
-
 // style
 import useHomePageTemplateStyles from "./HomePageTemplate.styles";
 
@@ -43,11 +42,11 @@ export interface IHomePageTemplateProps {
   infoFirst: IGroupInfoboxProps;
   valuesInfo: IValuesSectionprops;
   aboutUsInfo: IAboutUsSectionprops;
-  techCenterInfo:{
-    title:string;
-    description:string;
-    techImg:string
-  }
+  techCenterInfo: {
+    title: string;
+    description: string;
+    techImg: string;
+  };
 }
 
 function HomePageTemplate({
@@ -71,83 +70,116 @@ function HomePageTemplate({
         rightSection={hero.rightSection}
       />
       <Stack px={xPadding} spacing="sm">
-        <Group align="start" noWrap={isLargeScreen? true : false } >
-              <Box>
-                  <Box >
-                      <Title>{techCenterInfo.title}</Title>
-                      <Text>{techCenterInfo.description}</Text>
-                  </Box>
+        <Group align="start" noWrap={!!isLargeScreen}>
+          <Box>
+            <Box>
+              <Title>{techCenterInfo.title}</Title>
+              <Text>{techCenterInfo.description}</Text>
+            </Box>
+          </Box>
+          <Image src={techCenterInfo.techImg} />
+        </Group>
 
-              </Box>
-              <Image src={techCenterInfo.techImg} />
-          </Group>
-
-        {/*<GroupInfobox {...infoFirst} />*/}
         <Stack spacing="md">
-          <Title className={classes.titleSection}>Nuestros Valores</Title>
+          <Title>Nuestros Valores</Title>
           <SimpleGrid
             cols={4}
             breakpoints={[{ maxWidth: "36rem", cols: 1, spacing: "sm" }]}
           >
-            <Card withBorder shadow="xs">
+            <Card
+              withBorder
+              shadow="xs"
+              sx={{
+                background:
+                  "linear-gradient(160deg, rgba(240,62,62,1) 0%, rgba(201,42,42,1) 100%)",
+              }}
+            >
               <Stack spacing="xs" align="center" sx={{ textAlign: "center" }}>
-                <ActionIcon color="dark.9" variant="transparent" size="xl">
-                  <IconAbc size="3rem" />
+                <ActionIcon variant="transparent" size="xl">
+                  <IconFriends size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700}>
+                  <Text fz="lg" fw={700} color="white">
                     Compromiso
                   </Text>
-                  <Text fz="md">en la sastifacción del cliente</Text>
+                  <Text fz="md" color="white">
+                    en la sastifacción del cliente
+                  </Text>
                 </Box>
               </Stack>
             </Card>
 
-            <Card withBorder shadow="xs">
+            <Card
+              withBorder
+              shadow="xs"
+              sx={{
+                background:
+                  "linear-gradient(160deg, rgba(240,62,62,1) 0%, rgba(201,42,42,1) 100%)",
+              }}
+            >
               <Stack spacing="xs" align="center" sx={{ textAlign: "center" }}>
-                <ActionIcon color="dark.9" variant="transparent" size="xl">
-                  <IconAbc size="3rem" />
+                <ActionIcon variant="transparent" size="xl">
+                  <IconAward size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700}>
+                  <Text fz="lg" fw={700} color="white">
                     Respeto
                   </Text>
-                  <Text fz="md">en nuestras comunicaciones</Text>
+                  <Text fz="md" color="white">
+                    en nuestras comunicaciones
+                  </Text>
                 </Box>
               </Stack>
             </Card>
 
-            <Card withBorder shadow="xs">
+            <Card
+              withBorder
+              shadow="xs"
+              sx={{
+                background:
+                  "linear-gradient(160deg, rgba(240,62,62,1) 0%, rgba(201,42,42,1) 100%)",
+              }}
+            >
               <Stack spacing="xs" align="center" sx={{ textAlign: "center" }}>
-                <ActionIcon color="dark.9" variant="transparent" size="xl">
-                  <IconAbc size="3rem" />
+                <ActionIcon variant="transparent" size="xl">
+                  <IconSchool size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700}>
+                  <Text fz="lg" fw={700} color="white">
                     Voluntad
                   </Text>
-                  <Text fz="md">en impartir el mejor contenido</Text>
+                  <Text fz="md" color="white">
+                    en impartir el mejor contenido
+                  </Text>
                 </Box>
               </Stack>
             </Card>
 
-            <Card withBorder shadow="xs">
+            <Card
+              withBorder
+              shadow="xs"
+              sx={{
+                background:
+                  "linear-gradient(160deg, rgba(240,62,62,1) 0%, rgba(201,42,42,1) 100%)",
+              }}
+            >
               <Stack align="center" sx={{ textAlign: "center" }}>
-                <ActionIcon color="dark.9" variant="transparent" size="xl">
-                  <IconAbc size="3rem" />
+                <ActionIcon variant="transparent" size="xl">
+                  <IconClipboardCheck size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700}>
+                  <Text fz="lg" fw={700} color="white">
                     Responsabilidad
                   </Text>
-                  <Text fz="md">con nuestros colaboradores</Text>
+                  <Text fz="md" color="white">
+                    con nuestros colaboradores
+                  </Text>
                 </Box>
               </Stack>
             </Card>
           </SimpleGrid>
         </Stack>
         <AboutUsSection {...aboutUsInfo} />
-        
       </Stack>
     </Stack>
   );
