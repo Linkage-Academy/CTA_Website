@@ -1,16 +1,14 @@
 import { createStyles } from "@mantine/core";
 
 const useHomePageTemplateStyles = createStyles((theme) => ({
-  grid: {
-    display: "grid",
-    gridTemplateAreas: `"why" "card" "playing"`,
-    gridGap: "1rem 10rem",
+  titleSection: {
+    fontSize: 20,
+    fontWeight: 500,
 
     [theme.fn.largerThan("sm")]: {
-        gridTemplateColumns:"auto auto auto"
+      fontSize: 28,
     },
   },
-
-}))
+}));
 
 export default useHomePageTemplateStyles;
