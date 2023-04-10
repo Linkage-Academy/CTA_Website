@@ -8,6 +8,8 @@ import {
   Stack,
   Text,
   Title,
+  Group,
+  Image,
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
@@ -17,6 +19,7 @@ import HeroHeader from "../../components/HeroHeader";
 import StackInfobox, {
   IStackInfoboxProps,
 } from "../../components/StackInfobox/StackInfobox";
+import GroupInfobox, { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
 import ValuesSection, {
   IValuesSectionprops,
 } from "../../components/ValuesSection/ValuesSection";
@@ -24,7 +27,7 @@ import AboutUs, { IAboutUsprops } from "../../components/AboutUs/AboutUs";
 import AboutUsSection, {IAboutUsSectionprops} from "../../components/AboutUsSection/AboutUsSection";
 
 // Interfaces
-import { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
+
 
 // style
 import useHomePageTemplateStyles from "./HomePageTemplate.styles";
@@ -37,13 +40,19 @@ export interface IHomePageTemplateProps {
     title: string;
     rightSection: React.ReactNode;
   };
-  infoFirst: IStackInfoboxProps;
+  infoFirst: IGroupInfoboxProps;
   valuesInfo: IValuesSectionprops;
   aboutUsInfo: IAboutUsSectionprops;
+  techCenterInfo:{
+    title:string;
+    description:string;
+    techImg:string
+  }
 }
 
 function HomePageTemplate({
   accentColor,
+  techCenterInfo,
   hero,
   infoFirst,
   valuesInfo,
@@ -62,6 +71,18 @@ function HomePageTemplate({
         rightSection={hero.rightSection}
       />
       <Stack px={xPadding} spacing="sm">
+        <Group align="start" noWrap={isLargeScreen? true : false } >
+              <Box>
+                  <Box >
+                      <Title>{techCenterInfo.title}</Title>
+                      <Text>{techCenterInfo.description}</Text>
+                  </Box>
+
+              </Box>
+              <Image src={techCenterInfo.techImg} />
+          </Group>
+
+        {/*<GroupInfobox {...infoFirst} />*/}
         <Stack spacing="md">
           <Title className={classes.titleSection}>Nuestros Valores</Title>
           <SimpleGrid
@@ -126,7 +147,7 @@ function HomePageTemplate({
           </SimpleGrid>
         </Stack>
         <AboutUsSection {...aboutUsInfo} />
-        <StackInfobox {...infoFirst} />
+        
       </Stack>
     </Stack>
   );
