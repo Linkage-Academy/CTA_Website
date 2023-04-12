@@ -69,7 +69,7 @@ function HomePageTemplate({
         color={accentColor}
         rightSection={hero.rightSection}
       />
-      <Stack px={xPadding} spacing="sm">
+      <Stack px={xPadding} spacing="xl">
         <Group align="start" noWrap={!!isLargeScreen}>
           <Box>
             <Box>
