@@ -1,4 +1,4 @@
-// Components
+// React
 import {
   ActionIcon,
   Box,
@@ -20,18 +20,20 @@ import {
   IconFriends,
   IconSchool,
 } from "@tabler/icons-react";
+
+// Components
 import HeroHeader from "../../components/HeroHeader";
 import { IGroupInfoboxProps } from "../../components/GroupInfobox/GroupInfobox";
 import { IValuesSectionprops } from "../../components/ValuesSection/ValuesSection";
 import AboutUsSection, {
   IAboutUsSectionprops,
 } from "../../components/AboutUsSection/AboutUsSection";
+import CourseCardSection from "../../components/CourseCard/CourseCardSection";
+import { ICourseCardSectionProps } from "../../components/CourseCard/CourseCardSection";
 
-// Interfaces
-// style
+// Style
 import useHomePageTemplateStyles from "./HomePageTemplate.styles";
 
-// React
 
 export interface IHomePageTemplateProps {
   accentColor: DefaultMantineColor;
@@ -47,6 +49,7 @@ export interface IHomePageTemplateProps {
     description: string;
     techImg: string;
   };
+  courseCardSectionInfo: ICourseCardSectionProps;
 }
 
 function HomePageTemplate({
@@ -56,6 +59,7 @@ function HomePageTemplate({
   infoFirst,
   valuesInfo,
   aboutUsInfo,
+  courseCardSectionInfo
 }: IHomePageTemplateProps) {
   const theme = useMantineTheme();
   const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
@@ -180,6 +184,7 @@ function HomePageTemplate({
           </SimpleGrid>
         </Stack>
         <AboutUsSection {...aboutUsInfo} />
+        <CourseCardSection {...courseCardSectionInfo}/>
       </Stack>
     </Stack>
   );

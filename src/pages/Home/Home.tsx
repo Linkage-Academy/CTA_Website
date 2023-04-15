@@ -10,6 +10,8 @@ import VRImg from "./assets/VrImg.webp";
 import VR from "./assets/Vr.webp";
 import MissionImg from "./assets/MissionImg.webp";
 import AbUsImg from "./assets/AboutUsSectionImg.svg"
+import codigoImg from "./assets/Codigo.webp";
+import minecraftImg from "./assets/mineCourse.webp";
 
 import HomePageTemplate, {
   IHomePageTemplateProps,
@@ -75,7 +77,29 @@ function Home() {
       title:"¿Qué es el Centro Tecnológico Avanzado?",
       description:"La empresa Academy.Linkage tiene como objetivo fundamental, dotar de herramientas necesarias para sobresalir en este nuevo mundo donde nos exigen un alto manejo de habilidades y conocimientos multidisciplinarios en respuestas a las tendencias actuales y tomas de decisiones. Por ello, hemos creado la unidad de negocio: El Centro Tecnológico Avanzado (CTA), que tiene como objetivo despertar el interés en la física, matemáticas, tecnología, programación y manejo de habilidades humanas, con la conciencia que existe una gran responsabilidad individual que es un superpoder para un cambio social.",
       techImg:TechCenterV2Img,
+    },
+    courseCardSectionInfo:{
+      courseCardInfo1:{
+        title:"Curso Minecraft",
+        badgeText:"Disponible",
+        description:"Aprende a programar desde una temprana edad de manera divertida e interactiva dentro del Mundo de Minecraft",
+        btnText:"Más Información",
+        btnLink:"minecraft",
+        btnColor:"red",
+        courseImg: minecraftImg,
+      },
+      courseCardInfo2:{
+        title:"Curso Web",
+        badgeText:"Disponible",
+        description:"Aprende las tecnologías de punta en la industria y conviértete en un desarrollador Full Stack en la Web.",
+        btnText:"Más Información",
+        btnLink:"web",
+        btnColor:"red",
+        courseImg: codigoImg,
+
+      }
     }
+
   };
 
   return <HomePageTemplate {...data} />;
