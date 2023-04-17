@@ -9,6 +9,10 @@ const useHomePageTemplateStyles = createStyles((theme) => ({
       fontSize: 28,
     },
   },
+
+  textStyle:{
+    fontSize:"1.2rem",
+  }
 }));
 
 export default useHomePageTemplateStyles;

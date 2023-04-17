@@ -32,17 +32,17 @@ function CourseCard({
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">
-        <Text weight={500}>{title}</Text>
+        <Text className={classes.titleStyle} weight={500}>{title}</Text>
         <Badge color="pink" variant="light">
           {badgeText}
         </Badge>
       </Group>
 
-      <Text size="sm" color="dimmed">
+      <Text className={classes.textStyle} size="sm" color="dimmed">
         {description}
-      </Text>
+      </Text> 
       <Link className={classes.link} to={btnLink}>
-        <Button color={btnColor}  fullWidth mt="md" radius="md">
+        <Button color={btnColor} mt="md" radius="md">
             {btnText}
         </Button>
       </Link>

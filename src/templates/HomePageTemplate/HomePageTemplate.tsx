@@ -4,6 +4,7 @@ import {
   Box,
   Card,
   DefaultMantineColor,
+  Flex,
   Group,
   Image,
   SimpleGrid,
@@ -73,18 +74,18 @@ function HomePageTemplate({
         color={accentColor}
         rightSection={hero.rightSection}
       />
-      <Stack px={xPadding} spacing="xl">
+      <Stack px={xPadding} spacing={isLargeScreen ? 70 : "xl"}>
         <Group align="start" noWrap={!!isLargeScreen}>
-          <Box>
-            <Box>
+         
+            <Box w={"100%"}>
               <Title>{techCenterInfo.title}</Title>
-              <Text>{techCenterInfo.description}</Text>
+              <Text className={classes.textStyle}>{techCenterInfo.description}</Text>
             </Box>
-          </Box>
+         
           <Image src={techCenterInfo.techImg} />
         </Group>
 
-        <Stack spacing="md">
+        <Stack spacing="xl">
           <Title>Nuestros Valores</Title>
           <SimpleGrid
             cols={4}
@@ -183,6 +184,7 @@ function HomePageTemplate({
             </Card>
           </SimpleGrid>
         </Stack>
+
         <AboutUsSection {...aboutUsInfo} />
         <CourseCardSection {...courseCardSectionInfo}/>
       </Stack>

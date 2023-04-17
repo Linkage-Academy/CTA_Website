@@ -39,6 +39,7 @@ const routes = [
     navName: "Bootcamp Web",
     path: "/web",
   },
+
 ];
 
 function ColoredHeader({ color }: IColoredHeaderProps) {

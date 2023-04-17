@@ -31,11 +31,11 @@ function AboutUs({
             <Box>
                 <Box >
                     <Title>{mission.title}</Title>
-                    <Text>{mission.description}</Text>
+                    <Text className={classes.textStyle}>{mission.description}</Text>
                 </Box>
                 <Box mt={"xl"}>
                     <Title>{vision.title}</Title>
-                    <Text>{vision.description}</Text>
+                    <Text className={classes.textStyle}>{vision.description}</Text>
                 </Box>
             </Box>
             <Image src={abUsImg}/>

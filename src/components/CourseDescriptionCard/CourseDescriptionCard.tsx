@@ -66,8 +66,8 @@ function CourseDescriptionCard({
               ))}
             </Stack>
           </Group>
-          <Button color={color} fullWidth size="md" onClick={open}>
-            Inscribite
+          <Button color={color} size={"lg"} onClick={open}>
+            Inscríbete
           </Button>
         </Stack>
       </Card>

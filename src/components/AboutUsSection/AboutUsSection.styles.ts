@@ -8,6 +8,9 @@ const useAboutUsSectionStyles = createStyles((theme) => ({
         gridTemplateColumns:"auto auto"
     },
   },
+  textStyle: {
+    fontSize:"1.2rem",
+  }
 }))
 
 export default useAboutUsSectionStyles;
