@@ -31,6 +31,7 @@ import AboutUsSection, {
 } from "../../components/AboutUsSection/AboutUsSection";
 import CourseCardSection from "../../components/CourseCard/CourseCardSection";
 import { ICourseCardSectionProps } from "../../components/CourseCard/CourseCardSection";
+import Footer from "../../components/Footer/Footer";
 
 // Style
 import useHomePageTemplateStyles from "./HomePageTemplate.styles";
@@ -187,7 +188,9 @@ function HomePageTemplate({
 
         <AboutUsSection {...aboutUsInfo} />
         <CourseCardSection {...courseCardSectionInfo}/>
+        
       </Stack>
+      <Footer/>
     </Stack>
   );
 }
