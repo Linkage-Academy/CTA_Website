@@ -21,6 +21,9 @@ import Npc from "./assets/Npc.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "cyan",
+  footerInfo:{
+    footerColor:"#1098ad"
+  },
 
   hero: {
     title: "!Aprende a hacer tus ideas realidad!",
@@ -82,18 +85,21 @@ const data: ICoursePageTemplateProps = {
       title: "HTML/CSS",
       img: Infantil,
       description: "Módulo 1, 28 Horas de enseñanza",
+      modDescription:"",
       hasButton: true,
     },
     {
       title: "Python",
       img: Trans,
       description: "Módulo 2, 16 Horas de enseñanza",
+      modDescription:"",
       hasButton: true,
     },
     {
       title: "Django",
       img: Python,
       description: "Módulo 3, 32 Horas de enseñanza",
+      modDescription:"",
       hasButton: true,
     },
   ],

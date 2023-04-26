@@ -21,9 +21,11 @@ import StackInfobox, {
   IStackInfoboxProps,
 } from "../../components/StackInfobox/StackInfobox";
 import ImageCourseCard from "../../components/ImageCourseCard/ImageCourseCard";
+import Footer, {IFooterProps} from "../../components/Footer/Footer";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
+  footerInfo:IFooterProps;
   hero: {
     title: string;
     rightSection: React.ReactNode;
@@ -37,6 +39,7 @@ export interface ICoursePageTemplateProps {
     img: string;
     title: string;
     description: string;
+    modDescription:string;
     hasButton: boolean;
   }[];
 
@@ -45,6 +48,7 @@ export interface ICoursePageTemplateProps {
 
 function CoursePageTemplate({
   accentColor,
+  footerInfo,
   hero,
   infoFirst,
   courseCard,
@@ -93,6 +97,7 @@ function CoursePageTemplate({
               img={el.img}
               title={el.title}
               description={el.description}
+              modDescription={el.modDescription}
               hasButton={el.hasButton}
               color={accentColor}
             />
@@ -104,6 +109,7 @@ function CoursePageTemplate({
         <GroupInfobox {...infoThird} />
         <Box />
       </Group>
+      <Footer{...footerInfo}/>
     </Stack>
   );
 }

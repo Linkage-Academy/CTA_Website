@@ -1,4 +1,4 @@
-import { Card, Image, Text, Badge, Button, Group, DefaultMantineColor, } from '@mantine/core';
+import { Card, Image, Text, Badge, Button, Group, DefaultMantineColor, Center } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import useCourseCardStyles from './CourseCard.styles';
 
@@ -41,11 +41,13 @@ function CourseCard({
       <Text className={classes.textStyle} size="sm" color="dimmed">
         {description}
       </Text> 
-      <Link className={classes.link} to={btnLink}>
-        <Button color={btnColor} mt="md" radius="md">
-            {btnText}
-        </Button>
-      </Link>
+      <Center>
+        <Link className={classes.link} to={btnLink}>
+          <Button color={btnColor} mt="md" radius="md">
+              {btnText}
+          </Button>
+        </Link>
+      </Center>
 
     </Card>
   );

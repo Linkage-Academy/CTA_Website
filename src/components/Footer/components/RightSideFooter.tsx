@@ -2,32 +2,44 @@ import {
     Group,
     Stack,
     Text,
-    Box
+    Box,
+    MantineColor
   } from "@mantine/core";
 import React from "react";
 import {
-    IconChartArrowsVertical,
-    IconClockHour5,
-    IconFileCertificate,
-    IconRosette,
-    IconSchool,
-    IconUsers,
+    IconBrandFacebook,
+    IconBrandInstagram, 
+    IconBrandLinkedin, 
+    IconBrandWhatsapp,
   } from "@tabler/icons-react";
+import { Link } from 'react-router-dom';
 
 import useFooterStyles from "../Footer.styles";
 
 
-function RightSideFooter(){
+export interface IFooterProps{
+    footerColor:MantineColor;
+  }
+
+function RightSideFooter({footerColor}:IFooterProps){
     const {classes} = useFooterStyles();
     return(
-        <Box className={classes.box}>
+        <Box sx={{backgroundColor:footerColor}} className={classes.box}>
             <Stack  align={"flex-start"}>
                 <Text className={classes.titleStyle}>Redes Sociales</Text>
                 <Group>
-                    <Box className={classes.iconBox}><IconSchool/></Box>
-                    <Box className={classes.iconBox}><IconSchool/></Box>
-                    <Box className={classes.iconBox}><IconSchool/></Box>
-                    <Box className={classes.iconBox}><IconSchool/></Box>
+                    <Link to={"https://www.facebook.com/profile.php?id=100077515970246"}>
+                        <Box className={classes.iconBox}><IconBrandFacebook/></Box>
+                    </Link>
+                    <Link to={"https://www.linkedin.com/company/academy-linkage/"}>
+                        <Box className={classes.iconBox}><IconBrandInstagram/></Box>
+                    </Link>
+                    <Link to={"https://www.instagram.com/academylinkage/?igshid=ZDdkNTZiNTM%3D"}>
+                        <Box className={classes.iconBox}><IconBrandLinkedin/></Box>
+                    </Link>
+                    <Link to={"https://api.whatsapp.com/message/PWB3XYNADDQKI1?autoload=1&app_absent=0"}>
+                        <Box className={classes.iconBox}><IconBrandWhatsapp/></Box>
+                    </Link>
                 </Group>
                 <Stack align={"flex-start"}>
                     <Text className={classes.titleStyle}>Contáctanos</Text>

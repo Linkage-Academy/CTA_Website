@@ -2,25 +2,20 @@ import {
     Group,
     Stack,
     Text,
-    Box
+    Box,
+    MantineColor
   } from "@mantine/core";
 import React from "react";
-import {
-    IconChartArrowsVertical,
-    IconClockHour5,
-    IconFileCertificate,
-    IconRosette,
-    IconSchool,
-    IconUsers,
-  } from "@tabler/icons-react";
-
 import useFooterStyles from "../Footer.styles";
 
+export interface IFooterProps{
+  footerColor:MantineColor;
+}
 
-function BottomSideFooter(){
+function BottomSideFooter({footerColor}:IFooterProps){
     const {classes} = useFooterStyles();
     return(
-        <Box pl={"xl"} py={"md"} className={classes.bottomContainer}>
+        <Box sx={{backgroundColor:footerColor}} pl={"xl"} py={"md"} className={classes.bottomContainer}>
             <Text color="white">Copyright © 2023 Academy.Linkage - Reservado todos los derechos</Text>
         </Box>
     )

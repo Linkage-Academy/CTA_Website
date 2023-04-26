@@ -31,7 +31,7 @@ import AboutUsSection, {
 } from "../../components/AboutUsSection/AboutUsSection";
 import CourseCardSection from "../../components/CourseCard/CourseCardSection";
 import { ICourseCardSectionProps } from "../../components/CourseCard/CourseCardSection";
-import Footer from "../../components/Footer/Footer";
+import Footer, {IFooterProps} from "../../components/Footer/Footer";
 
 // Style
 import useHomePageTemplateStyles from "./HomePageTemplate.styles";
@@ -39,6 +39,7 @@ import useHomePageTemplateStyles from "./HomePageTemplate.styles";
 
 export interface IHomePageTemplateProps {
   accentColor: DefaultMantineColor;
+  footerInfo:IFooterProps;
   hero: {
     title: string;
     rightSection: React.ReactNode;
@@ -51,13 +52,22 @@ export interface IHomePageTemplateProps {
     description: string;
     techImg: string;
   };
+  metodologyInfo: {
+    title: string;
+    description: string;
+    techImg: string;
+  };
+
   courseCardSectionInfo: ICourseCardSectionProps;
+  
 }
 
 function HomePageTemplate({
   accentColor,
+  metodologyInfo,
   techCenterInfo,
   hero,
+  footerInfo,
   infoFirst,
   valuesInfo,
   aboutUsInfo,
@@ -83,9 +93,9 @@ function HomePageTemplate({
               <Text className={classes.textStyle}>{techCenterInfo.description}</Text>
             </Box>
          
-          <Image src={techCenterInfo.techImg} />
+          <Image src={techCenterInfo.techImg} maw={550}/>
         </Group>
-
+        <AboutUsSection {...aboutUsInfo}/>
         <Stack spacing="xl">
           <Title>Nuestros Valores</Title>
           <SimpleGrid
@@ -185,12 +195,21 @@ function HomePageTemplate({
             </Card>
           </SimpleGrid>
         </Stack>
-
-        <AboutUsSection {...aboutUsInfo} />
+        
+        <Group align="start" noWrap={!!isLargeScreen}>
+         
+          <Box w={"100%"}>
+            <Title>{metodologyInfo.title}</Title>
+            <Text className={classes.textStyle}>{metodologyInfo.description}</Text>
+          </Box>
+        
+          <Image src={metodologyInfo.techImg} />
+        </Group>
+        
         <CourseCardSection {...courseCardSectionInfo}/>
         
       </Stack>
-      <Footer/>
+      <Footer{...footerInfo}/>
     </Stack>
   );
 }

@@ -6,6 +6,7 @@ import {
   Stack,
   Text,
   Title,
+  Center
 } from "@mantine/core";
 import React from "react";
 import { useDisclosure } from "@mantine/hooks";
@@ -16,6 +17,7 @@ export interface IImageCourseCardProps {
   img: string;
   title: string;
   description: string;
+  modDescription:string;
   color: DefaultMantineColor;
   hasButton?: boolean;
 }
@@ -24,6 +26,7 @@ function ImageCourseCard({
   img,
   title,
   description,
+  modDescription,
   color,
   hasButton = true,
 }: IImageCourseCardProps) {
@@ -47,12 +50,15 @@ function ImageCourseCard({
             <Title order={3} className={classes.titleCardSection} color="white">
               {title}
             </Title>
-            <Text color="white">{description}</Text>
+            <Text color="white" sx={{fontWeight:"bold"}}>{description}</Text>
+            <Text color="white">{modDescription}</Text>
           </Box>
           {hasButton && (
+            <Center>
             <Button color={color} size="sm" fullWidth={false} onClick={open}>
               Inscribete al Módulo
             </Button>
+            </Center>
           )}
         </Stack>
       </Card>

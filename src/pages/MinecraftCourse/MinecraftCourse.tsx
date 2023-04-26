@@ -22,6 +22,9 @@ import Npc from "./assets/Npc.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "teal",
+  footerInfo:{
+    footerColor:"#0ca678"
+  },
   hero: {
     title: "!Diviertete Aprendiendo con Minecraft!",
     rightSection: <Image src={PlantHeroImageMinecraft} maw={350} />,
@@ -81,24 +84,28 @@ const data: ICoursePageTemplateProps = {
       title: "Programación Mediante Bloques",
       img: Infantil,
       description: "Módulo 1, 28 Horas de enseñanza",
+      modDescription:"En este módulo se aprenderán los conceptos básicos de la programación, utilizando una interfaz que utilice bloques visuales para representar las instrucciones a la máquina.",
       hasButton: false,
     },
     {
       title: "Transición a Código",
       img: Trans,
       description: "Módulo 2, 16 Horas de enseñanza",
+      modDescription:"Continua la curva de aprendizaje de la programación empleando la interfaz interactiva en contraste con su versión de las instrucciones en código.",
       hasButton: false,
     },
     {
       title: "Python",
       img: Python,
       description: "Módulo 3, 32 Horas de enseñanza",
+      modDescription:"En este módulo aprenderás el lenguaje de programación Python. Pondrás a prueba los conceptos aprendidos con actividades interactivas.",
       hasButton: false,
     },
     {
       title: "Introducción a Arduino",
       img: Arduino,
       description: "Módulo 4, 16 Horas de enseñanza",
+      modDescription:"En este módulo recibirás una introducción a la robótica a través de Arduino Uno. Los conceptos aprendidos en los módulos anteriores serán cruciales para poder entender la placa Arduino.",
       hasButton: false,
     },
   ],
