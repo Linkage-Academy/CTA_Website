@@ -210,7 +210,7 @@ function HomePageTemplate({
         
       </Stack>
       {isLargeScreen ? <Footer{...footerInfo}/> : null}
-      
+
     </Stack>
   );
 }
