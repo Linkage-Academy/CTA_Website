@@ -19,6 +19,7 @@ import Trans from "./assets/Trans.webp";
 import Python from "./assets/Python.webp";
 import Arduino from "./assets/Arduino.webp";
 import Npc from "./assets/Npc.webp";
+import fourImg from "./assets/PlantHeroImageMinecraft.webp";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "teal",
@@ -119,6 +120,15 @@ const data: ICoursePageTemplateProps = {
     description:
       "La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!",
     rightSection: <Image src={Npc} width={200} />,
+  },
+  infoFourth: {
+    title: "¿Qué Aprenderás?",
+    bottomSection: (
+      <></>
+    ),
+    description:
+      "Aprenderás programación mediante el uso de bloques de código predefinido que representan acciones específicas del juego. Aprenderás fundamentos de la sintaxis y la estructura del lenguaje de programación y como se puede aplicar estos conceptos en el contexto del juego. Aprenderás pensamiento computacional con codificación en el juego y plan de estudios.",
+    rightSection: <Image src={fourImg} width={200} />,
   },
 };
 

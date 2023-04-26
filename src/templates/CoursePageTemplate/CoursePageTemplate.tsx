@@ -44,6 +44,7 @@ export interface ICoursePageTemplateProps {
   }[];
 
   infoThird: IGroupInfoboxProps;
+  infoFourth: IGroupInfoboxProps;
 }
 
 function CoursePageTemplate({
@@ -55,6 +56,7 @@ function CoursePageTemplate({
   infoSecond,
   modules,
   infoThird,
+  infoFourth
 }: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
@@ -105,11 +107,12 @@ function CoursePageTemplate({
         </SimpleGrid>
       </Box>
 
-      <Group grow px={xPadding}>
+      <Group grow={isLargeScreen ? true : false} px={xPadding}>
+        <GroupInfobox {...infoFourth} />
         <GroupInfobox {...infoThird} />
-        <Box />
+        
       </Group>
-      <Footer{...footerInfo}/>
+      {isLargeScreen ? <Footer{...footerInfo}/> : null}
     </Stack>
   );
 }

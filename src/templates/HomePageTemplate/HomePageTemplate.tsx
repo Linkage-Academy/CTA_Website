@@ -209,7 +209,8 @@ function HomePageTemplate({
         <CourseCardSection {...courseCardSectionInfo}/>
         
       </Stack>
-      <Footer{...footerInfo}/>
+      {isLargeScreen ? <Footer{...footerInfo}/> : null}
+      
     </Stack>
   );
 }

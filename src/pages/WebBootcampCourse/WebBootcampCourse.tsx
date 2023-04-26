@@ -18,6 +18,7 @@ import Infantil from "../MinecraftCourse/assets/Infantil.webp";
 import Trans from "../MinecraftCourse/assets/Trans.webp";
 import Python from "../MinecraftCourse/assets/Python.webp";
 import Npc from "./assets/Npc.webp";
+import fourImg from "./assets/CTA_WHO_IMG.png";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "cyan",
@@ -114,6 +115,16 @@ const data: ICoursePageTemplateProps = {
       "La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!",
     rightSection: <Image src={Npc} width={200} />,
   },
+  infoFourth: {
+    title: "¿Qué Esperar de este Bootcamp?",
+    bottomSection: (
+      <></>
+    ),
+    description:
+      "El curso guiará a los estudiantes en la creación de una pequeña red social, ideal para incluir en un portafolio de desarrollo. Esta plataforma será desarrollada durante toda la duración del curso. Las últimas dos semanas del curso serán dedicadas al desarrollo de proyectos propios de los estudiantes que les ayudara a afianzar sus conocimientos.",
+    rightSection: <Image src={fourImg} width={200} />,
+  },
+  
 };
 
 function WebBootcampCourse() {
