@@ -41,7 +41,6 @@ const routes = [
     navName: "Bootcamp Web",
     path: "/web",
   },
-
 ];
 
 function ColoredHeader({ color }: IColoredHeaderProps) {
@@ -72,10 +71,15 @@ function ColoredHeader({ color }: IColoredHeaderProps) {
   });
 
   return (
-    <MantineHeader className={classes.header} pr="xl" height="auto">
+    <MantineHeader
+      className={classes.header}
+      pr="xl"
+      height="auto"
+      sx={{ alignItems: "center" }}
+    >
       <SendEmailModal opened={openedEmail} close={closeEmail} />
       <Image
-        maw={230}
+        maw={280}
         src={logoUrl}
         alt="Academy Linkage Logo"
         className={classes.headerLogo}
