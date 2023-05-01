@@ -22,8 +22,8 @@ import fourImg from "./assets/CTA_WHO_IMG.png";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "cyan",
-  footerInfo:{
-    footerColor:"#1098ad"
+  footerInfo: {
+    footerColor: "#1098ad",
   },
 
   hero: {
@@ -86,21 +86,24 @@ const data: ICoursePageTemplateProps = {
       title: "HTML/CSS",
       img: Infantil,
       description: "Módulo 1, 28 Horas de enseñanza",
-      modDescription:"",
+      modDescription:
+        "Este curso  proporcionará una base sólida en HTML y CSS sobre la que puedes profundizar para aprender conceptos avanzados de desarrollo web. Al completar este curso, tendrás las habilidades y la confianza necesarias para crear tus propias páginas y diseños web, y seguir aprendiendo más sobre el desarrollo web. ",
       hasButton: true,
     },
     {
       title: "Python",
       img: Trans,
       description: "Módulo 2, 16 Horas de enseñanza",
-      modDescription:"",
+      modDescription:
+        "Este curso te proporcionará una base sólida en programación con Python sobre la que puedes profundizar para aprender conceptos avanzados de programación. Al completar este curso, tendrás las habilidades y la confianza necesarias para crear tus propios programas y seguir aprendiendo más sobre la programación. ",
       hasButton: true,
     },
     {
       title: "Django",
       img: Python,
       description: "Módulo 3, 32 Horas de enseñanza",
-      modDescription:"",
+      modDescription:
+        "Guiará a los estudiantes en la fase final del desarrollo de un servidor web, utilizando lo previamente aprendido en los modulos anteriores. Este módulo unificará lo previamente aprendido y enseñará cosas nuevos como base de datos.",
       hasButton: true,
     },
   ],
@@ -117,14 +120,11 @@ const data: ICoursePageTemplateProps = {
   },
   infoFourth: {
     title: "¿Qué Esperar de este Bootcamp?",
-    bottomSection: (
-      <></>
-    ),
+    bottomSection: <></>,
     description:
       "El curso guiará a los estudiantes en la creación de una pequeña red social, ideal para incluir en un portafolio de desarrollo. Esta plataforma será desarrollada durante toda la duración del curso. Las últimas dos semanas del curso serán dedicadas al desarrollo de proyectos propios de los estudiantes que les ayudara a afianzar sus conocimientos.",
     rightSection: <Image src={fourImg} width={200} />,
   },
-  
 };
 
 function WebBootcampCourse() {

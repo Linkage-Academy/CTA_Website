@@ -36,7 +36,9 @@ function Hero({ title, color, rightSection }: IHeroProps) {
         mb="1rem"
       >
         <Stack className={classes.mainHero}>
-          <Title className={classes.mainTitle}>{title}</Title>
+          <Title className={classes.mainTitle} align="left">
+            {title}
+          </Title>
           <Box>
             <Button
               color={`${color}.8`}
