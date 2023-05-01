@@ -6,9 +6,10 @@ import LogoLightGray from "./assets/LogoLightGray.png";
 export interface ISendEmailModalProps {
   opened: boolean;
   close: () => void;
+  contact?:boolean;
 }
 
-function SendEmailModal({ opened, close }: ISendEmailModalProps) {
+function SendEmailModal({ opened, close, contact=false }: ISendEmailModalProps) {
   const { classes } = useSendEmailModalStyles();
   const form = useForm({
     initialValues: {
@@ -82,7 +83,8 @@ function SendEmailModal({ opened, close }: ISendEmailModalProps) {
             required
           />
           <Button fullWidth type="submit">
-            Inscribete
+            { contact ? "Contáctanos" : "Inscríbete" }
+            
           </Button>
         </Stack>
       </form>

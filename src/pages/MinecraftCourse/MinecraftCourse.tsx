@@ -27,7 +27,7 @@ const data: ICoursePageTemplateProps = {
     footerColor:"#0ca678"
   },
   hero: {
-    title: "!Diviertete Aprendiendo con Minecraft!",
+    title: "¡Diviértete Aprendiendo con Minecraft!",
     rightSection: <Image src={PlantHeroImageMinecraft} maw={350} />,
   },
   infoFirst: {
