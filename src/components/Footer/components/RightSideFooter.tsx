@@ -31,10 +31,10 @@ function RightSideFooter({footerColor}:IFooterProps){
                     <Link to={"https://www.facebook.com/profile.php?id=100077515970246"}>
                         <Box className={classes.iconBox}><IconBrandFacebook/></Box>
                     </Link>
-                    <Link to={"https://www.linkedin.com/company/academy-linkage/"}>
+                    <Link to={"https://www.instagram.com/academylinkage/?igshid=ZDdkNTZiNTM%3D"}>
                         <Box className={classes.iconBox}><IconBrandInstagram/></Box>
                     </Link>
-                    <Link to={"https://www.instagram.com/academylinkage/?igshid=ZDdkNTZiNTM%3D"}>
+                    <Link to={"https://www.linkedin.com/company/academy-linkage/"}>
                         <Box className={classes.iconBox}><IconBrandLinkedin/></Box>
                     </Link>
                     <Link to={"https://api.whatsapp.com/message/PWB3XYNADDQKI1?autoload=1&app_absent=0"}>
