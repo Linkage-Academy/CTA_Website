@@ -12,6 +12,7 @@ import {
   Text,
   Title,
   useMantineTheme,
+  Center
 } from "@mantine/core";
 import React from "react";
 import { useMediaQuery } from "@mantine/hooks";
@@ -115,9 +116,11 @@ function HomePageTemplate({
                   <IconFriends size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700} color="white">
-                    Compromiso
-                  </Text>
+                  <Center>
+                    <Text fz="lg" fw={700} color="white">
+                      Compromiso
+                    </Text>
+                  </Center>
                   <Text fz="md" color="white">
                     en la sastifacción del cliente
                   </Text>
@@ -138,9 +141,11 @@ function HomePageTemplate({
                   <IconAward size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700} color="white">
-                    Respeto
-                  </Text>
+                  <Center>
+                    <Text fz="lg" fw={700} color="white">
+                      Respeto
+                    </Text>
+                  </Center>
                   <Text fz="md" color="white">
                     en nuestras comunicaciones
                   </Text>
@@ -161,9 +166,11 @@ function HomePageTemplate({
                   <IconSchool size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700} color="white">
-                    Voluntad
-                  </Text>
+                  <Center>
+                    <Text fz="lg" fw={700} color="white">
+                      Voluntad
+                    </Text>
+                  </Center>
                   <Text fz="md" color="white">
                     en impartir el mejor contenido
                   </Text>
@@ -184,9 +191,11 @@ function HomePageTemplate({
                   <IconClipboardCheck size="3rem" color="white" />
                 </ActionIcon>
                 <Box>
-                  <Text fz="lg" fw={700} color="white">
-                    Responsabilidad
-                  </Text>
+                  <Center>
+                    <Text fz="lg" fw={700} color="white">
+                      Responsabilidad
+                    </Text>
+                  </Center>
                   <Text fz="md" color="white">
                     con nuestros colaboradores
                   </Text>

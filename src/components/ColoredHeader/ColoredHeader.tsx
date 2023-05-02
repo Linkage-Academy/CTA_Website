@@ -17,7 +17,8 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
 // logoUrl from "./assets/Logo.png";
-import logoUrl from "./assets/IsotipoCTAMenu 1.png";
+import logoUrl from "./assets/whiteIsotype.png";
+
 
 import useColoredHeaderStyles from "./ColoredHeader.styles";
 import SendEmailModal from "../SendEmailModal";
