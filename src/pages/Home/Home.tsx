@@ -95,7 +95,7 @@ function Home() {
         badgeText:"Disponible",
         description:"Aprende a programar desde una temprana edad de manera divertida e interactiva dentro del Mundo de Minecraft",
         btnText:"Más Información",
-        btnLink:"minecraft",
+        btnLink:"/minecraft",
         btnColor:"red",
         courseImg: minecraftImg,
       },
@@ -105,7 +105,7 @@ function Home() {
         description:
           "Aprende las tecnologías de punta en la industria y conviértete en un desarrollador Full Stack en la Web.",
         btnText: "Más Información",
-        btnLink: "web",
+        btnLink: "/web",
         btnColor: "red",
         courseImg: codigoImg,
       },

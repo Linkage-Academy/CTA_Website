@@ -1,4 +1,6 @@
 import { Box, Button, Image } from "@mantine/core";
+import { useEffect } from "react";
+
 import {
   IconChartArrowsVertical,
   IconClockHour5,
@@ -133,6 +135,9 @@ const data: ICoursePageTemplateProps = {
 };
 
 function MinecraftCourse() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return <CoursePageTemplate {...data} />;
 }
 

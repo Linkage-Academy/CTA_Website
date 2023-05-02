@@ -2,6 +2,9 @@ import { Card, Image, Text, Badge, Button, Group, DefaultMantineColor, Center } 
 import { Link } from 'react-router-dom';
 import useCourseCardStyles from './CourseCard.styles';
 
+
+
+
 export interface ICourseCardProps{
     title:string;
     badgeText:string;
@@ -21,6 +24,9 @@ function CourseCard({
     btnLink,
     courseImg
 }:ICourseCardProps) {
+
+
+
     const {classes} = useCourseCardStyles();
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
