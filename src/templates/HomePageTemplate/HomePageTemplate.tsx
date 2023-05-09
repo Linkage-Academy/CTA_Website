@@ -87,7 +87,7 @@ function HomePageTemplate({
         rightSection={hero.rightSection}
       />
       <Stack px={xPadding} spacing={isLargeScreen ? 70 : "xl"}>
-        <Group align="start" noWrap={!!isLargeScreen}>
+        <Group align="start" spacing={40} noWrap={!!isLargeScreen}>
          
             <Box w={"100%"}>
               <Title>{techCenterInfo.title}</Title>

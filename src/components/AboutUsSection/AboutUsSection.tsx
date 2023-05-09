@@ -27,7 +27,7 @@ function AboutUs({
     const isLargeScreen = useMediaQuery(`(min-width: ${theme.breakpoints.sm} )`);
     return(
        
-        <Group align="start" noWrap={isLargeScreen? true : false }>
+        <Group spacing={40} align="start" noWrap={isLargeScreen? true : false }>
             <Box>
                 <Box >
                     <Title>{mission.title}</Title>

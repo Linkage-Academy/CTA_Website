@@ -49,7 +49,9 @@ function RightSideFooter({footerColor}:IFooterProps){
                     <Link className={classes.linkNoStyle} to={"https://api.whatsapp.com/message/PWB3XYNADDQKI1?autoload=1&app_absent=0"}>
                         <Text color="white">Número de Teléfono: (+505) 8389 1437</Text>
                     </Link>
-                    <Text onClick={toggle} color="white">Correo Electrónico: contacto@linkageacademy.com</Text>
+                    <Link className={classes.linkNoStyle} to={"https://linkageacademy.com/index.php/contact/"}>
+                        <Text color="white">Correo Electrónico: contacto@linkageacademy.com</Text>
+                    </Link>
                 </Stack>
             </Stack>
         </Box>
