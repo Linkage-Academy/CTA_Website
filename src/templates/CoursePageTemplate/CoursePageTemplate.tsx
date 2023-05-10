@@ -21,11 +21,11 @@ import StackInfobox, {
   IStackInfoboxProps,
 } from "../../components/StackInfobox/StackInfobox";
 import ImageCourseCard from "../../components/ImageCourseCard/ImageCourseCard";
-import Footer, {IFooterProps} from "../../components/Footer/Footer";
+import Footer, { IFooterProps } from "../../components/Footer/Footer";
 
 export interface ICoursePageTemplateProps {
   accentColor: DefaultMantineColor;
-  footerInfo:IFooterProps;
+  footerInfo: IFooterProps;
   hero: {
     title: string;
     rightSection: React.ReactNode;
@@ -39,8 +39,11 @@ export interface ICoursePageTemplateProps {
     img: string;
     title: string;
     description: string;
-    modDescription:string;
+    modDescription: string;
     hasButton: boolean;
+    requiredHours?: string;
+    numberOfSessions?: string;
+    dependsOn?: string;
   }[];
 
   infoThird: IGroupInfoboxProps;
@@ -56,7 +59,7 @@ function CoursePageTemplate({
   infoSecond,
   modules,
   infoThird,
-  infoFourth
+  infoFourth,
 }: ICoursePageTemplateProps) {
   const { classes } = useCoursePageTemplateStyles();
   const theme = useMantineTheme();
@@ -102,17 +105,19 @@ function CoursePageTemplate({
               modDescription={el.modDescription}
               hasButton={el.hasButton}
               color={accentColor}
+              requiredHours={el.requiredHours}
+              dependsOn={el.dependsOn}
+              numberOfSessions={el.numberOfSessions}
             />
           ))}
         </SimpleGrid>
       </Box>
 
-      <Group grow={isLargeScreen ? true : false} px={xPadding}>
+      <Group grow={!!isLargeScreen} px={xPadding}>
         <GroupInfobox {...infoFourth} />
         <GroupInfobox {...infoThird} />
-        
       </Group>
-      {isLargeScreen ? <Footer{...footerInfo}/> : null}
+      {isLargeScreen ? <Footer {...footerInfo} /> : null}
     </Stack>
   );
 }
