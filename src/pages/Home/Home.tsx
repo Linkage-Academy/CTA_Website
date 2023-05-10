@@ -9,10 +9,10 @@ import TechCenterV2Img from "./assets/ProgrammerSet.webp";
 import VRImg from "./assets/VrImg.webp";
 import VR from "./assets/Vr.webp";
 import MissionImg from "./assets/MissionImg.webp";
-import AbUsImg from "./assets/Mision-y-vision.webp";
+import AbUsImg from "./assets/Mision-y-vision 1.png";
 import codigoImg from "./assets/Codigo.webp";
 import minecraftImg from "./assets/mineCourse.webp";
-import techImg from "./assets/CTA_WHO_IMG.png";
+import techImg from "./assets/CTA_WHO_IMG 1.png";
 import metogologyImg from "./assets/STEM_IMG.png";
 
 import HomePageTemplate, {
@@ -95,7 +95,7 @@ function Home() {
         badgeText:"Disponible",
         description:"Aprende a programar desde una temprana edad de manera divertida e interactiva dentro del Mundo de Minecraft",
         btnText:"Más Información",
-        btnLink:"minecraft",
+        btnLink:"/minecraft",
         btnColor:"red",
         courseImg: minecraftImg,
       },
@@ -105,7 +105,7 @@ function Home() {
         description:
           "Aprende las tecnologías de punta en la industria y conviértete en un desarrollador Full Stack en la Web.",
         btnText: "Más Información",
-        btnLink: "web",
+        btnLink: "/web",
         btnColor: "red",
         courseImg: codigoImg,
       },

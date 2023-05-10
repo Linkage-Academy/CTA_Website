@@ -42,6 +42,9 @@ const useFooterStyles = createStyles((theme) => ({
     },
     linkStyle:{
         textDecorationColor: "white",
+    },
+    linkNoStyle:{
+        textDecoration: "None",
     }
 
 }));

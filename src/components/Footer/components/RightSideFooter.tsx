@@ -13,9 +13,10 @@ import {
     IconBrandWhatsapp,
   } from "@tabler/icons-react";
 import { Link } from 'react-router-dom';
+import SendEmailModal from "../../SendEmailModal";
 
 import useFooterStyles from "../Footer.styles";
-
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 
 export interface IFooterProps{
     footerColor:MantineColor;
@@ -23,18 +24,20 @@ export interface IFooterProps{
 
 function RightSideFooter({footerColor}:IFooterProps){
     const {classes} = useFooterStyles();
+    const [opened, {toggle, close}] = useDisclosure();
     return(
         <Box sx={{backgroundColor:footerColor}} className={classes.box}>
+            <SendEmailModal opened={opened} close={close} contact={true}/>
             <Stack  align={"flex-start"}>
                 <Text className={classes.titleStyle}>Redes Sociales</Text>
                 <Group>
                     <Link to={"https://www.facebook.com/profile.php?id=100077515970246"}>
                         <Box className={classes.iconBox}><IconBrandFacebook/></Box>
                     </Link>
-                    <Link to={"https://www.linkedin.com/company/academy-linkage/"}>
+                    <Link to={"https://www.instagram.com/academylinkage/?igshid=ZDdkNTZiNTM%3D"}>
                         <Box className={classes.iconBox}><IconBrandInstagram/></Box>
                     </Link>
-                    <Link to={"https://www.instagram.com/academylinkage/?igshid=ZDdkNTZiNTM%3D"}>
+                    <Link to={"https://www.linkedin.com/company/academy-linkage/"}>
                         <Box className={classes.iconBox}><IconBrandLinkedin/></Box>
                     </Link>
                     <Link to={"https://api.whatsapp.com/message/PWB3XYNADDQKI1?autoload=1&app_absent=0"}>
@@ -42,10 +45,13 @@ function RightSideFooter({footerColor}:IFooterProps){
                     </Link>
                 </Group>
                 <Stack align={"flex-start"}>
-                    <Text className={classes.titleStyle}>Contáctanos</Text>
-
-                    <Text color="white">Número de Teléfono: (+505) 8389 1437</Text>
-                    <Text color="white">Correo Electrónico: contacto@linkageacademy.com</Text>
+                    <Text onClick={toggle} className={classes.titleStyle}>Contáctanos</Text>
+                    <Link className={classes.linkNoStyle} to={"https://api.whatsapp.com/message/PWB3XYNADDQKI1?autoload=1&app_absent=0"}>
+                        <Text color="white">Número de Teléfono: (+505) 8389 1437</Text>
+                    </Link>
+                    <Link className={classes.linkNoStyle} to={"https://linkageacademy.com/index.php/contact/"}>
+                        <Text color="white">Correo Electrónico: contacto@linkageacademy.com</Text>
+                    </Link>
                 </Stack>
             </Stack>
         </Box>

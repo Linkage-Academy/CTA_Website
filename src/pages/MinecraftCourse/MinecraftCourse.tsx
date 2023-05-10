@@ -1,4 +1,6 @@
 import { Box, Button, Image } from "@mantine/core";
+import { useEffect } from "react";
+
 import {
   IconChartArrowsVertical,
   IconClockHour5,
@@ -27,7 +29,7 @@ const data: ICoursePageTemplateProps = {
     footerColor:"#0ca678"
   },
   hero: {
-    title: "!Diviertete Aprendiendo con Minecraft!",
+    title: "¡Diviértete Aprendiendo con Minecraft!",
     rightSection: <Image src={PlantHeroImageMinecraft} maw={350} />,
   },
   infoFirst: {
@@ -133,6 +135,9 @@ const data: ICoursePageTemplateProps = {
 };
 
 function MinecraftCourse() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return <CoursePageTemplate {...data} />;
 }
 
