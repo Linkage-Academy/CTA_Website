@@ -113,10 +113,12 @@ function CoursePageTemplate({
         </SimpleGrid>
       </Box>
 
-      <Group grow={!!isLargeScreen} px={xPadding}>
+      
+      <Stack px={xPadding}>
         <GroupInfobox {...infoFourth} />
         <GroupInfobox {...infoThird} />
-      </Group>
+      </Stack>
+        
       {isLargeScreen ? <Footer {...footerInfo} /> : null}
     </Stack>
   );

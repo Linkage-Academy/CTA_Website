@@ -47,7 +47,7 @@ function Footer({footerColor}:IFooterProps){
 
             </Box>     
             <Box sx={{backgroundColor:footerColor}} className={classes.box}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3900.597332986633!2d-86.29228118518651!3d12.139679891405454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDA4JzIyLjkiTiA4NsKwMTcnMjQuMyJX!5e0!3m2!1sen!2sni!4v1681794242551!5m2!1sen!2sni" width="250" height="250"  loading="lazy"></iframe>              
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3900.597332986633!2d-86.29228118518651!3d12.139679891405454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDA4JzIyLjkiTiA4NsKwMTcnMjQuMyJX!5e0!3m2!1sen!2sni!4v1681794242551!5m2!1sen!2sni" width="320" height="280"  loading="lazy"></iframe>              
             </Box>
     <RightSideFooter footerColor={footerColor}/>
         </Box>

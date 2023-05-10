@@ -208,7 +208,7 @@ function HomePageTemplate({
         <Group align="start" noWrap={!!isLargeScreen}>
          
           <Box w={"100%"}>
-            <Title>{metodologyInfo.title}</Title>
+            <Title mb={"lg"}>{metodologyInfo.title}</Title>
             <Text className={classes.textStyle}>{metodologyInfo.description}</Text>
           </Box>
         

@@ -110,7 +110,7 @@ function ImageCourseCard({
           {hasButton && (
             <Center>
               <Button color={color} size="sm" fullWidth={false} onClick={open}>
-                Inscribete al Módulo
+                Más Información
               </Button>
             </Center>
           )}

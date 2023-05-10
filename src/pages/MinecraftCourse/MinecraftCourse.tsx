@@ -20,8 +20,8 @@ import Infantil from "./assets/Infantil.webp";
 import Trans from "./assets/Trans.webp";
 import Python from "./assets/Python.webp";
 import Arduino from "./assets/Arduino.webp";
-import Npc from "./assets/Npc.webp";
-import fourImg from "./assets/PlantHeroImageMinecraft.webp";
+import Npc from "./assets/NpcPic.png";
+import fourImg from "./assets/CTA_Girl.png";
 
 const data: ICoursePageTemplateProps = {
   accentColor: "teal",
@@ -88,40 +88,40 @@ const data: ICoursePageTemplateProps = {
       img: Infantil,
       description: "Módulo 1, 28 Horas de enseñanza",
       modDescription:"En este módulo se aprenderán los conceptos básicos de la programación, utilizando una interfaz que utilice bloques visuales para representar las instrucciones a la máquina.",
-      hasButton: false,
+      hasButton: true,
     },
     {
       title: "Transición a Código",
       img: Trans,
       description: "Módulo 2, 16 Horas de enseñanza",
       modDescription:"Continua la curva de aprendizaje de la programación empleando la interfaz interactiva en contraste con su versión de las instrucciones en código.",
-      hasButton: false,
+      hasButton: true,
     },
     {
       title: "Python",
       img: Python,
       description: "Módulo 3, 32 Horas de enseñanza",
       modDescription:"En este módulo aprenderás el lenguaje de programación Python. Pondrás a prueba los conceptos aprendidos con actividades interactivas.",
-      hasButton: false,
+      hasButton: true,
     },
     {
       title: "Introducción a Arduino",
       img: Arduino,
       description: "Módulo 4, 16 Horas de enseñanza",
       modDescription:"En este módulo recibirás una introducción a la robótica a través de Arduino Uno. Los conceptos aprendidos en los módulos anteriores serán cruciales para poder entender la placa Arduino.",
-      hasButton: false,
+      hasButton: true,
     },
   ],
   infoThird: {
     title: "Conviértete en un experto",
     bottomSection: (
-      <Button color="teal" mt="1rem" size="sm" fullWidth>
+      <Button color="teal" mt="1rem" size="sm" >
         ¡Compra el curso ahora!
       </Button>
     ),
     description:
       "La metodología de nuestro curso para niños es que los chicos aprendan mientras se divierten en su videojuego favorito, en este caso Minecraft. La gamificación presente alrededor de la curva de aprendizaje será la clave para desarrollar el pensamiento lógico del estudiante. ¡Anímate!",
-    rightSection: <Image src={Npc} width={200} />,
+    rightSection: <Image src={Npc} maw={280} />,
   },
   infoFourth: {
     title: "¿Qué Aprenderás?",
@@ -130,7 +130,7 @@ const data: ICoursePageTemplateProps = {
     ),
     description:
       "Aprenderás programación mediante el uso de bloques de código predefinido que representan acciones específicas del juego. Aprenderás fundamentos de la sintaxis y la estructura del lenguaje de programación y como se puede aplicar estos conceptos en el contexto del juego. Aprenderás pensamiento computacional con codificación en el juego y plan de estudios.",
-    rightSection: <Image src={fourImg} width={200} />,
+    rightSection: <Image src={fourImg} maw={280} />,
   },
 };
 

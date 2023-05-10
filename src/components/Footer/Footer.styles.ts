@@ -20,7 +20,7 @@ const useFooterStyles = createStyles((theme) => ({
 
     box:{
 
-        height:"250px",
+        height:"300px",
         backgroundColor:"red"
     },
     iconBox:{

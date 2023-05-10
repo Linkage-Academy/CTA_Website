@@ -31,8 +31,8 @@ export interface IColoredHeaderProps {
 // No time to fixed the circular dependency
 const routes = [
   {
-    navName: "Home",
-    path: "/",
+    navName: "Inicio",
+    path: "https://linkageacademy.com/",
   },
   {
     navName: "Minecraft",

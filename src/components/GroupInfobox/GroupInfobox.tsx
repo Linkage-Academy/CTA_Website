@@ -18,7 +18,7 @@ function GroupBanner({
   const { classes } = useGroupInfoboxStyles();
   return (
     <Box className={classes.grid}>
-      <Title order={4} weight={500} className=   {classes.gridTitle}>
+      <Title order={4} weight={500} className={classes.gridTitle}>
         {title}
       </Title>
       <Text fz={14} className={classes.gridContent}>
